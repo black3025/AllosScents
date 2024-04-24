@@ -1,4 +1,5 @@
     <!-- login form -->
+    <div style="color:green;">{{session('success')}}</div>
     <h4>Login</h4>
     <div class="row">
         <form action="{{route('signin')}}" method="POST">
