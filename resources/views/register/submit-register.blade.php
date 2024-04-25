@@ -1,23 +1,37 @@
-    <!-- Registration form -->
-    <h4>Register</h4>
+<!-- Registration form -->
+<br>
+<br>
+<br>
+<br>
+<div class="container">
     <div class="row">
-    <form action="{{route('users.create')}}" method="POST">
-        @csrf
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Register</h4>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('users.create') }}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-        </div>
-        <button type="submit">Register</button>
-    </form>
     </div>
-
-    
-
+</div>
+<br>
+<br>
+<br>

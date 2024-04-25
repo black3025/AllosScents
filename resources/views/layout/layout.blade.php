@@ -8,6 +8,8 @@
     <title>ALo's SCENTS♦SHOP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .offcanvas-body {
             padding: 20px;
@@ -52,7 +54,7 @@
         }
 
         .site-footer hr {
-            border-top-color: #bbb;
+            border-top-color: #000000;
             opacity: 0.5;
         }
 
@@ -61,7 +63,7 @@
         }
 
         .site-footer h6 {
-            color: #fff;
+            color: #000000;
             font-size: 16px;
             text-transform: uppercase;
             margin-top: 5px;
@@ -69,7 +71,7 @@
         }
 
         .site-footer a {
-            color: #737373;
+            color: #000000;
         }
 
         .site-footer a:hover {
@@ -200,7 +202,35 @@
         .social-icons a.dribbble:hover {
             background-color: #ea4c89;
         }
-
+        .cart-detail{
+            padding:15px 0px;
+        }
+        .cart-detail-img img{
+            width:100%;
+            height:100%;
+            padding-left:15px;
+        }
+        .cart-detail-product p{
+            margin:0px;
+            color:#000;
+            font-weight:500;
+        }
+        .cart-detail .price{
+            font-size:12px;
+            margin-right:10px;
+            font-weight:500;
+        }
+        .cart-detail .count{
+            color:#000;
+        }
+        .checkout{
+            border-top:1px solid #d2d2d2;
+            padding-top: 15px;
+        }
+        .checkout .btn-primary{
+            border-radius:50px;
+        
+        }
         @media (max-width: 767px) {
             .social-icons li.title {
                 display: block;
@@ -243,8 +273,11 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="terms" style="color: rgb(0, 0, 0);">Terms</a></li>
                     <li class="nav-item">
-                        <button class="btn  " data-bs-toggle="modal" data-bs-target="#exampleModal">🛒</button>
+                        <button class="btn  " data-bs-toggle="modal" data-bs-target="#exampleModal">🛒
+                            <span class="badge" style="color:red">{{count((array) session('cart'))}}</span>
+                        </button>
                     </li>
+                    
                     <li class="nav-item">
                         <button class="btn">♥</button>
                     </li>
@@ -289,19 +322,28 @@
                 <li><a href="contact" style="color: rgb(0, 0, 0);">Contact</a></li>
                 <li><a href="terms" style="color: rgb(0, 0, 0);">Terms</a></li>
                 <hr style="margin: 10px 0; border: none; height: 2px; background-color: black;">
-                <li><a href="profile"><img
-                            src="https://banner2.cleanpng.com/20180516/zq/kisspng-computer-icons-google-account-icon-design-login-5afc02dab4a218.0950785215264652427399.jpg"
-                            alt="loginicon" style="width: 25px; height: 25px;">My Account</a></li>
-                <li><a href="#"><img
-                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-heart-outline-512.png"
-                            alt="wishlisticon" style="width: 25px; height: 25px;">My Wishlist</a></li>
-                <li><a href="login"><img
-                            src="https://cdn3.iconfinder.com/data/icons/thin-outline-ui-part-2-of-4/100/pack3-06-512.png"
-                            alt="signinicon" style="width: 25px; height: 25px;">Sign In</a></li>
-                <li><a href="register"><img
-                            src="https://cdn0.iconfinder.com/data/icons/aami-web-internet/64/simple-27-512.png"
-                            alt="createicon" style="width: 25px; height: 25px;">register</a></li>
-            </ul>
+                <ul class="list-unstyled">
+                    @if(Auth::User())
+                    <li><a href="profile"><img
+                                src="https://banner2.cleanpng.com/20180516/zq/kisspng-computer-icons-google-account-icon-design-login-5afc02dab4a218.0950785215264652427399.jpg"
+                                alt="loginicon" style="width: 25px; height: 25px;">My Account</a></li>
+                    @endif
+                    <li><a href="#"><img
+                                src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-heart-outline-512.png"
+                                alt="wishlisticon" style="width: 25px; height: 25px;">My Wishlist</a></li>
+                    @if(Auth::User())
+                        <li><a href="logout"><img
+                                    src="https://cdn3.iconfinder.com/data/icons/thin-outline-ui-part-2-of-4/100/pack3-06-512.png"
+                                    alt="signinicon" style="width: 25px; height: 25px;">logout</a></li>
+                    @else
+                        <li><a href="login"><img
+                                    src="https://cdn3.iconfinder.com/data/icons/thin-outline-ui-part-2-of-4/100/pack3-06-512.png"
+                                    alt="signinicon" style="width: 25px; height: 25px;">Sign In</a></li>
+                        <li><a href="register"><img
+                                    src="https://cdn0.iconfinder.com/data/icons/aami-web-internet/64/simple-27-512.png"
+                                    alt="createicon" style="width: 25px; height: 25px;">register</a></li>
+                    @endif
+                </ul>
         </div>
     </div>
 
@@ -344,16 +386,39 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add to Cart</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Cart Details</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- Add your form or content for adding items to cart here -->
-                    <p>Add item to cart form goes here...</p>
+                    <!-- Getting total amount -->
+                    @php $total = 0 @endphp
+                        @foreach((array) session('cart') as $id=>$details)
+                            @php $total += $details['price'] * $details['quantity'] @endphp
+                     @endforeach
+                    <div class = "row">
+                        <div class="col-lg-12 col-sm-12 col-12 total-section text-right">
+                            <p>Total: <span class="text-info">&#8369; {{number_format($total,2)}}</span></p>
+                        </div>
+                    </div>
+                    <!-- Display all products in cart -->
+                    @if(session('cart'))
+                        @foreach((array) session('cart') as $id=>$details)
+                            <div class ="row cart-detail">
+                                <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                                    <img src="{{asset('images')}}//{{$details['cover']}}"/>
+                                </div>
+                                <div class = "col-lg-8 col-sm-8 col-8 cart-detail-product">
+                                    <p>{{$details['product_name']}}</p>
+                                    <span class="price text-info"> &#8369; {{number_format($details['price'],2)}}</span>
+                                    <span class="count">Quantity: {{$details['quantity']}}
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <a href="{{route('checkout')}}" class="btn btn-primary">Proceed to Checkout</a>
                 </div>
             </div>
         </div>
@@ -379,26 +444,21 @@
             </div>
             <div class="col-md-3">
                 <h6>Explore</h6>
-                <ul class="footer-links" style="list-style-type: none;"> <!-- Removed bullet points -->
+                <ul class="footer-links" style="list-style-type: none;">
                     <li><a href="/">Home</a></li>
                     <li><a href="about">About</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
                 <h6>Contact Us</h6>
-                <ul class="footer-links" style="list-style-type: none;"> <!-- Removed bullet points -->
+                <ul class="footer-links" style="list-style-type: none;">
                     <li>Phone: <a href="tel:09925885731">09925885731</a></li>
                     <li>Email: <a href="mailto:alosscentsshop@gmail.com">alosscentsshop@gmail.com</a></li>
                 </ul>
-            </div>
-        </div>
-        <hr class="mt-0">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="copyright-text">© 2024 ALo's Scents Shop. All rights reserved.</p>
+                <div class="row">
             </div>
             <div class="col-md-6">
-                <ul class="d-flex justify-content-end" style="list-style-type: none;"> <!-- Removed bullet points -->
+                <ul class="d-flex justify-content-end" style="list-style-type: none;">
                     <li><a class="facebook" href="https://www.facebook.com"><img
                                 src="/images/icons8-facebook-48.png" alt="Facebook"></a></li>
                     <li><a class="instagram" href="https://www.instagram.com"><img
@@ -410,6 +470,12 @@
                     <li><a class="tiktok" href="https://www.tiktok.com"><img
                                 src="/images/icons8-tiktok-48.png" alt="TikTok"></a></li>
                 </ul>
+            </div>
+        </div>
+        <hr class="mt-0">
+
+            <div class="col-md-6">
+                <p class="copyright-text">© 2024 ALo's Scents Shop. All rights reserved.</p>
             </div>
         </div>
     </div>

@@ -53,42 +53,42 @@
 <div class="card-container d-flex flex-row flex-wrap justify-content-center mt-3">
     <div class="card mb-3 mx-2 border-0" style="width: 20%;">
         <div class="card-body p-0">
-            <a href="#" class="btn image-zoom"><img src="{{ URL('images/category1.png') }}"
+            <a href="/shop?category=perfume" class="btn image-zoom"><img src="{{ URL('images/category1.png') }}"
                     class="d-block mx-auto w-100" alt="..."></a>
         </div>
     </div>
 
     <div class="card mb-3 mx-2 border-0" style="width: 19%;">
         <div class="card-body p-0">
-            <a href="#" class="btn image-zoom"><img src="{{ URL('images/category2.png') }}"
+            <a href="/shop?category=alcohol" class="btn image-zoom"><img src="{{ URL('images/category2.png') }}"
                     class="d-block mx-auto w-100" alt="..."></a>
         </div>
     </div>
 
     <div class="card mb-3 mx-2 border-0" style="width: 20%;">
         <div class="card-body p-0">
-            <a href="#" class="btn image-zoom"><img src="{{ URL('images/category3.png') }}"
+            <a href="/shop?category=candle" class="btn image-zoom"><img src="{{ URL('images/category3.png') }}"
                     class="d-block mx-auto w-100" alt="..."></a>
         </div>
     </div>
 
     <div class="card mb-3 mx-2 border-0" style="width: 16%;">
         <div class="card-body p-0">
-            <a href="#" class="btn image-zoom"><img src="{{ URL('images/category4.png') }}"
+            <a href="/shop?category=essential_oil" class="btn image-zoom"><img src="{{ URL('images/category4.png') }}"
                     class="d-block mx-auto w-100" alt="..."></a>
         </div>
     </div>
 
     <div class="card mb-3 mx-2 border-0" style="width: 19%;">
         <div class="card-body p-0">
-            <a href="#" class="btn image-zoom"><img src="{{ URL('images/category5.png') }}"
+            <a href="/shop?category=inhaler" class="btn image-zoom"><img src="{{ URL('images/category5.png') }}"
                     class="d-block mx-auto w-100" alt="..."></a>
         </div>
     </div>
 
     <div class="card mb-3 mx-2 border-0" style="width: 17%;">
         <div class="card-body p-0">
-            <a href="#" class="btn image-zoom"><img src="{{ URL('images/category6.png') }}"
+            <a href="/shop?category=disinfectant" class="btn image-zoom"><img src="{{ URL('images/category6.png') }}"
                     class="d-block mx-auto w-100" alt="..."></a>
         </div>
     </div>
@@ -96,7 +96,7 @@
 
     <div class="card mb-3 mx-2 border-0" style="width: 20%;">
         <div class="card-body p-0">
-            <a href="#" class="btn image-zoom"><img src="{{ URL('images/category7.png') }}"
+            <a href="/shop?category=diffuser" class="btn image-zoom"><img src="{{ URL('images/category7.png') }}"
                     class="d-block mx-auto w-100" alt="..."></a>
         </div>
     </div>
@@ -160,21 +160,21 @@
     <div class="card-container d-flex justify-content-center mt-3" id="users">
         <div class="card mx-1 border-1">
             <div class="card-body p-0 overflow-hidden">
-                <a href="#" class="btn image-zoom"><img src="{{ URL('images/male category.jpeg') }}"
+                <a href="/shop" class="btn image-zoom"><img src="{{ URL('images/male category.jpeg') }}"
                         class="d-block mx-auto w-100 rounded" alt="..."></a>
             </div>
         </div>
 
         <div class="card mx-1 border-1">
             <div class="card-body p-0 overflow-hidden">
-                <a href="http://127.0.0.1:8000/shop" class="btn image-zoom" style="margin-top: 50%"><img
+                <a href="/shop" class="btn image-zoom" style="margin-top: 50%"><img
                         src="{{ URL('images/home-logo.png') }}" class="d-block mx-auto w-100" alt="..."></a>
             </div>
         </div>
 
         <div class="card mx-1 border-1">
             <div class="card-body p-0 overflow-hidden">
-                <a href="#" class="btn image-zoom"><img src="{{ URL('images/female category.jpeg') }}"
+                <a href="/shop" class="btn image-zoom"><img src="{{ URL('images/female category.jpeg') }}"
                         class="d-block mx-auto w-100 rounded" alt="..."></a>
             </div>
         </div>
@@ -207,203 +207,5 @@
 </style>
 {{-- end of users --}}
 
-
-
-{{-- start of Best sellers --}}
-<br>
-<br>
-<br>
-<div class="d-flex justify-content-center">
-    <h5>Best seller</h5>
-</div>
-<div class="carousel-container" style="overflow-x: scroll; white-space: nowrap; width: 100%;">
-    <div class="carousel" style="display: inline-block; transition: transform 0.5s ease; white-space: nowrap;">
-        <div class="card-container">
-            <div class="card" style="width: 18rem; display: inline-block; margin-right: 10px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem; display: inline-block; margin-right: 10px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem; display: inline-block; margin-right: 10px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem; display: inline-block; margin-right: 10px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem; display: inline-block; margin-right: 10px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem; display: inline-block; margin-right: 10px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem; display: inline-block; margin-right: 10px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem; display: inline-block; margin-right: 10px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem; display: inline-block; margin-right: 10px;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{-- end of Best sellers --}}
-
-
-
-{{-- start of new arrival --}}
-<br>
-<br>
-<br>
-<br>
-<div class="d-flex justify-content-center">
-    <h3>New Arrival</h3>
-</div>
-<div class="button-collage">
-    <a href="#" class="btn btn-primary btn-lg">
-        <div class="button-img" style="padding-top: 100%;">
-            <img src="image1.jpg" alt="Button 1">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary">
-        <div class="button-img" style="padding-top: 75%;">
-            <img src="image2.jpg" alt="Button 2">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-    <a href="#" class="btn btn-primary btn-sm">
-        <div class="button-img" style="padding-top: 50%;">
-            <img src="image3.jpg" alt="Button 3">
-        </div>
-    </a>
-
-</div>
-
-<style>
-    .button-collage {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 10px;
-    }
-
-    .button-collage a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .button-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .button-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-
-    .button-collage a:hover .button-img img {
-        transform: scale(1.1);
-    }
-</style>
-{{-- end of new arrival --}}
 
 @endsection
