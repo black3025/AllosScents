@@ -1,8 +1,5 @@
-<!-- Login form -->
-<br>
-<br>
-<br>
-<div class="container">
+    <!-- login form -->
+    <h4>Login</h4>
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <div style="color: green;">{{ session('success') }}</div>
